@@ -89,6 +89,7 @@ body{
 
 #new-task{
     width: 60%;
+    padding-left: 2%;
 }
 
 #new-task-date{
@@ -98,7 +99,7 @@ body{
 #task-create-button{
     color: white;
     width: 13%;
-    background-color: rgba(44,95,166,255);    
+    background-color: rgba(44,95,166,255);   
 }
 
 .task-nav-container{
@@ -129,13 +130,23 @@ body{
     border-radius: 5px;
     border-width:0px;
     background-color: white;
+    font-size: 94%;
     box-shadow: 1px 1px 4px rgba(128, 128, 128, 0.488);
 }
 
 #search{
     width: 55%;
+    padding-left: 3%;
 }
 
 #filter{
     width:30%;
+}
+
+table{
+    width: 100%;
+}
+
+th,td{
+    text-align: left;
 }

@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style.css">
+    <script src="./script.js"></script>
     <title>To-do List</title>
 </head>
 <body>
@@ -27,9 +28,9 @@
         <div class="body-container">
             <div class="new-task-container">
                 <div class="new-task-form">
-                    <input type="text" id="new-task">
-                    <input type="date" value="Created on" id="new-task-date">
-                    <input type="button" value="Create" id="task-create-button">
+                    <input type="text" id="new-task" placeholder="Create new task">
+                    <input type="date" value="Created on" id="new-task-date" >
+                    <input type="button" value="Create" id="task-create-button" onclick="createTask()">
                 </div>
             </div>
             <div class="task-nav-container">
@@ -37,9 +38,44 @@
                     To Do List
                 </div>
                 <div class="nav-section">
-                    <input type="text" id="search">
-                    <input type="button" name="drop-down" id="filter">
+                    <input type="text" id="search" placeholder="Search">
+                    <select name="" id="filter">
+                        <option disabled selected name="drop-down" id="filter" placeholder="">Filter</option>
+                        <option value="done">Done</option>
+                        <option value="todo">ToDo</option>
+                    </select>
                 </div>
+            </div>
+            <div class="task-list-container">
+                <table class="task-table">
+                    <tr class="table-header">
+                        <th>Task</th>
+                        <th>Created on</th>
+                        <th>Status</th>
+                    </tr>
+                    <tr class="row1">
+                        <td>homework</td>
+                        <td>23 may</td>
+                        <td>
+                            <input type="checkbox" name="status" id="">
+                        </td>
+                    </tr>
+                    <tr class="row2">
+                        <td>homework</td>
+                        <td>23 may</td>
+                        <td>
+                            <input type="checkbox" name="status" id="">
+                        </td>
+                    </tr>
+                    <tr class="row3">
+                        <td>homework</td>
+                        <td>23 may</td>
+                        <td>
+                            <input type="checkbox" name="status" id="">
+                        </td>
+                    </tr>
+                    <tr class="row4"></tr>
+                </table>
             </div>
         </div>
     </div>
