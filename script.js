@@ -75,3 +75,39 @@ function checkAddress(checkbox)
     }
     /* alert("row index : "+checkbox.parentNode.parentNode.rowIndex); */
 }
+
+
+
+/* var searchInp = document.getElementById('search-input')
+
+searchInp.addEventListener('keyup',function()
+{
+    console.log("hello");
+    var value = $(this).val();
+    console.log("value : ", value);
+}); */
+
+$('#search-input').on('keyup',function()
+{
+    var value = $(this).val();
+    var data = searchTable(value, taskArray);
+    buildTable(data);
+})
+
+function searchTable(value, data)
+{
+    var filteredData = [];
+
+    for( var i=0; i<data.length; i++)
+    {
+        value = value.toLowerCase();
+        var name = data[i].name.toLowerCase();
+
+        if (name.startsWith(value)) 
+        {
+            filteredData.push(data[i]);   
+        }
+    }
+
+    return filteredData;
+}

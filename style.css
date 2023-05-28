@@ -128,7 +128,7 @@ body{
     max-width: 700px;
 }
 
-#search,#filter{
+#search-input,#filter{
     border-radius: 5px;
     border-width:0px;
     background-color: white;
@@ -136,7 +136,7 @@ body{
     box-shadow: 1px 1px 4px rgba(128, 128, 128, 0.488);
 }
 
-#search{
+#search-input{
     width: 65%;
     padding-left: 3%;
 }
