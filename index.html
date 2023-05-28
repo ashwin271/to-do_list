@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style.css">
+    <script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
     <script src="./script.js"></script>
     <title>To-do List</title>
 </head>
@@ -40,42 +41,24 @@
                 <div class="nav-section">
                     <input type="text" id="search" placeholder="Search">
                     <select name="" id="filter">
-                        <option disabled selected name="drop-down" id="filter" placeholder="">Filter</option>
+                        <option disabled selected name="drop-down" placeholder="">Filter</option>
                         <option value="done">Done</option>
                         <option value="todo">ToDo</option>
                     </select>
                 </div>
             </div>
             <div class="task-list-container">
-                <table class="task-table">
-                    <tr class="table-header">
-                        <th>Task</th>
-                        <th>Created on</th>
-                        <th>Status</th>
+                <table>
+                    <tr id="table-header">
+                        <th id="table-task">Task</th>
+                        <th id="table-date">Created on</th>
+                        <th id="table-status">Status</th>
                     </tr>
-                    <tr class="row1">
-                        <td>homework</td>
-                        <td>23 may</td>
-                        <td>
-                            <input type="checkbox" name="status" id="">
-                        </td>
-                    </tr>
-                    <tr class="row2">
-                        <td>homework</td>
-                        <td>23 may</td>
-                        <td>
-                            <input type="checkbox" name="status" id="">
-                        </td>
-                    </tr>
-                    <tr class="row3">
-                        <td>homework</td>
-                        <td>23 may</td>
-                        <td>
-                            <input type="checkbox" name="status" id="">
-                        </td>
-                    </tr>
-                    <tr class="row4"></tr>
+                    <tbody id="myTable">
+
+                    </tbody>
                 </table>
+                
             </div>
         </div>
     </div>

@@ -75,6 +75,7 @@ body{
     display: flex;
     justify-content: space-around;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 #task-create-button,#new-task,#new-task-date{
@@ -122,8 +123,9 @@ body{
 .nav-section{
     display: flex;
     justify-content: space-between;
-    width: 45%;
+    width: 70%;
     height: 45%;
+    max-width: 700px;
 }
 
 #search,#filter{
@@ -135,18 +137,48 @@ body{
 }
 
 #search{
-    width: 55%;
+    width: 65%;
     padding-left: 3%;
 }
 
 #filter{
-    width:30%;
+    width: 25%;
+}
+
+option{
+    color: rgba(48, 41, 41, 0.773);
+}
+
+.task-list-containter{
+    width: 100%;
+    margin: 0% 5%;
 }
 
 table{
     width: 100%;
+    padding: 0% 5%;
 }
 
-th,td{
+
+#table-header{
+    background-color: rgba(235,244,247,255);
+}
+
+#table-task{
+    width: 50%;
+    word-break: break-all;
+}
+
+.status-section{
+
+}
+
+.dlt-ico{
+    width: 20px;
+    height: 20px;
+}
+
+td,th{
     text-align: left;
 }
+
