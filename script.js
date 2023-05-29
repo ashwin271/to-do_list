@@ -34,7 +34,7 @@ function buildTable(data)
 
         var chk = "";
 
-        if(taskArray[i].status==true)
+        if(data[i].status==true)
         {
             chk = "checked";
         }
@@ -102,8 +102,56 @@ function searchTable(value, data)
     {
         value = value.toLowerCase();
         var name = data[i].name.toLowerCase();
+    
 
         if (name.startsWith(value)) 
+        {
+            filteredData.push(data[i]);   
+        }
+    }
+
+    return filteredData;
+}
+
+/* ----------------------------------------------------------- */
+
+
+$('#filter').on('change',function()
+{
+    /* console.log('changed') */
+
+    var e = document.getElementById('filter');
+
+    var value = e.value;
+
+    var data = [];
+
+    if(value=="none")
+    {
+        buildTable(taskArray);
+        return;
+    }
+    else if(value=="done")
+    {
+        data = filterTable(true, taskArray);
+    }
+    else
+    {
+        data = filterTable(false, taskArray);
+    }
+
+    buildTable(data);
+});
+
+function filterTable(value, data)
+{
+    var filteredData = [];
+
+    for( var i=0; i<data.length; i++)
+    {
+        var status = data[i].status;
+
+        if (status == value) 
         {
             filteredData.push(data[i]);   
         }
